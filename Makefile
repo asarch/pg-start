@@ -14,7 +14,11 @@ CC_FLAGS += -I/usr/include/postgresql
 # OpenBSD
 CC_FLAGS += -I/usr/local/include/postgresql
 
+# Slackware/Ubuntu
 LD_FLAGS = -lpq
+
+# OpenBSD
+LD_FLAGS +=-L/usr/local/lib -lpq
 
 $(TARGET) : $(OBJS)
 	$(CC) -o $(TARGET) $(OBJS) $(LD_FLAGS)
