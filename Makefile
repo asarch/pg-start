@@ -5,11 +5,14 @@ HDRS =
 
 CC_FLAGS = -g -ggdb
 
+# Slackware
+CC_FLAGS += -I/usr/include
+
 # Ubuntu
 CC_FLAGS += -I/usr/include/postgresql
 
-# Slackware
-CC_FLAGS += -I/usr/include/
+# OpenBSD
+CC_FLAGS += -I/usr/local/include/postgresql
 
 LD_FLAGS = -lpq
 
